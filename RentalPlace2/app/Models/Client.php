@@ -8,15 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Client extends Model
 {
     use HasFactory;
-    protected $table = 'client';
+    protected $table = 'clients';
     protected $fillable = [
         'name',
-        'phone number',
+        'phone',
        
     ];
 
-    public function cars()
+    public function place()
     {
-        return $this->hasMany(Car::class);
+        return $this->hasMany(Place::class);
     }
 }

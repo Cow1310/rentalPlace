@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Place;
 use App\Models\Client;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $Clients = Client::all();
+        $clients = Client::all();
         return view('clients.index', compact('clients'));
     }
 
@@ -29,7 +30,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $Client = Client::create($request->all());
+        $clients = Client::create($request->all());
         return redirect()->route('clients.index');
     }
 
@@ -38,8 +39,8 @@ class ClientController extends Controller
      */
     public function show(string $id)
     {
-        $Client = Client::find($id);
-        return view('clients.show', compact('client'));
+        $clients = Client::find($id);
+        return view('clients.show', compact('clients'));
     }
 
     /**
@@ -47,8 +48,8 @@ class ClientController extends Controller
      */
     public function edit(string $id)
     {
-        $Client = Client::find($id);
-        return view('clients.edit', compact('client'));
+        $clients = Client::find($id);
+        return view('clients.edit', compact('clients'));
     }
 
     /**
@@ -56,8 +57,8 @@ class ClientController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $Client = Client::find($id);
-        $Client->update($request->all());
+        $clients = Client::find($id);
+        $clients->update($request->all());
         return redirect()->route('clients.index');
     }
 
@@ -66,8 +67,8 @@ class ClientController extends Controller
      */
     public function destroy(string $id)
     {
-        $Client = Client::find($id);
-        $Client->delete();
+        $clients = Client::find($id);
+        $clients->delete();
         return redirect()->route('clients.index');
     }
 }

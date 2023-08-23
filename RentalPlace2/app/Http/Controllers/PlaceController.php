@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
+use App\Models\Client;
 use App\Models\Place;
 use Illuminate\Http\Request;
 
@@ -13,7 +13,7 @@ class placeController extends Controller
      */
     public function index()
     {
-        $places = place::all();
+        $places = Place::all();
         return view('places.index', compact('places'));
     }
 
@@ -22,8 +22,8 @@ class placeController extends Controller
      */
     public function create()
     {
-        $brands = Brand::all();
-        return view('places.create', compact('brands'));
+        $places = Place::all();
+        return view('places.create', compact('places'));
     }
 
     /**
@@ -31,7 +31,7 @@ class placeController extends Controller
      */
     public function store(Request $request)
     {
-        place::create($request->all());
+        Place::create($request->all());
 
         return redirect()->route('places.index');
     }
@@ -41,8 +41,8 @@ class placeController extends Controller
      */
     public function show(string $id)
     {
-        $place = place::find($id);
-        return view('places.show', compact('place'));
+        $places = Place::find($id);
+        return view('places.show', compact('places'));
     }
 
     /**
@@ -50,8 +50,8 @@ class placeController extends Controller
      */
     public function edit(string $id)
     {
-        $place = place::find($id);
-        return view('places.edit', compact('place'));
+        $places = Place::find($id);
+        return view('places.edit', compact('places'));
     }
 
     /**
@@ -59,8 +59,8 @@ class placeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $place = place::find($id);
-        $place->update($request->all());
+        $places = Place::find($id);
+        $places->update($request->all());
         return redirect()->route('places.index');
     }
 
@@ -69,8 +69,8 @@ class placeController extends Controller
      */
     public function destroy(string $id)
     {
-        $place = place::find($id);
-        $place->delete();
+        $places = Place::find($id);
+        $places->delete();
         return redirect()->route('places.index');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
+use App\Models\Place;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 
@@ -13,8 +13,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $Admins = Admin::all();
-        return view('Admins.index', compact('Admins'));
+        $admins = Admin::all();
+        return view('admins.index', compact('admins'));
     }
 
     /**
@@ -22,8 +22,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        $brands = Brand::all();
-        return view('Admins.create', compact('brands'));
+        $admins = Admin::all();
+        return view('admins.create', compact('admins'));
     }
 
     /**
@@ -33,7 +33,7 @@ class AdminController extends Controller
     {
         Admin::create($request->all());
 
-        return redirect()->route('Admins.index');
+        return redirect()->route('admins.index');
     }
 
     /**
@@ -41,8 +41,8 @@ class AdminController extends Controller
      */
     public function show(string $id)
     {
-        $Admin = Admin::find($id);
-        return view('Admins.show', compact('Admin'));
+        $admins = Admin::find($id);
+        return view('admins.show', compact('Admin'));
     }
 
     /**
@@ -50,8 +50,8 @@ class AdminController extends Controller
      */
     public function edit(string $id)
     {
-        $Admin = Admin::find($id);
-        return view('Admins.edit', compact('Admin'));
+        $admins = Admin::find($id);
+        return view('admins.edit', compact('Admin'));
     }
 
     /**
@@ -59,9 +59,9 @@ class AdminController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $Admin = Admin::find($id);
-        $Admin->update($request->all());
-        return redirect()->route('Admins.index');
+        $admins = Admin::find($id);
+        $admins->update($request->all());
+        return redirect()->route('admins.index');
     }
 
     /**
@@ -69,8 +69,8 @@ class AdminController extends Controller
      */
     public function destroy(string $id)
     {
-        $Admin = Admin::find($id);
-        $Admin->delete();
-        return redirect()->route('Admins.index');
+        $admins = Admin::find($id);
+        $admins->delete();
+        return redirect()->route('admins.index');
     }
 }

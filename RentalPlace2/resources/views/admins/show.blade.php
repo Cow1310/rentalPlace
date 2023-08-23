@@ -1,20 +1,20 @@
 @extends('layouts.app')
-@section('title', 'Details for name ' . $client->name)
+@section('title', 'Details for name ' . $admin->name)
 @section('content')
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>Details for name {{ $client->name }}</h1>
-      <p><a href="{{ route('client.index') }}">Back to all client</a></p>
+      <h1>Details for name {{ $admin->name }}</h1>
+      <p><a href="{{ route('admin.index') }}">Back to all admin</a></p>
       <table class="table table-striped">
         <tbody>
           <tr>
             <th>Name</th>
-            <td>{{ $client->name }}</td>
+            <td>{{ $admin->name }}</td>
           </tr>
           <tr>
             <th>Phone number</th>
-            <td>{{ $client->phone number }}</td>
+            <td>{{ $admin->phone }}</td>
           </tr>
         </tbody>
       </table>

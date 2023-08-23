@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Admin extends Model
 {
     use HasFactory;
-    protected $table ='place';
-    protected $fillable=['address', 'price','phone number' ];
+    protected $table ='admins';
+    protected $fillable=['ID','address', 'price','description' ];
 
 }
