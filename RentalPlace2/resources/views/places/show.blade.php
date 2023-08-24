@@ -1,28 +1,28 @@
 @extends('layouts.app')
-@section('title', 'Details for ID ' . $place->id)
+@section('title', 'Details for ID ' . $places->id)
 @section('content')
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>Details for ID {{ $place->id }}</h1>
+      <h1>Details for ID {{ $places->id }}</h1>
       <p><a href="{{ route('places.index') }}">Back to all places</a></p>
       <table class="table table-striped">
         <tbody>
           <tr>
             <th>ID</th>
-            <td>{{ $place->id }}</td>
+            <td>{{ $places->id }}</td>
           </tr>
           <tr>
             <th>Address</th>
-            <td>{{ $place->address }}</td>
+            <td>{{ $places->address }}</td>
           </tr>
           <tr>
             <th>Phone</th>
-            <td>{{ $place->phone }}</td>
+            <td>{{ $places->phone }}</td>
           </tr>
           <tr>
             <th>Price</th>
-            <td>{{ $place->price}}</td>
+            <td>{{ $places->price}}</td>
           </tr>
         </tbody>
       </table>

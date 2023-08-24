@@ -10,7 +10,7 @@
         <div class="form-group">
           <div class="mb-3">
             <label for="" class="form-label">Client</label>
-            <select class="form-select form-select-lg" name="place_id" id="place_id">
+            <select class="form-select form-select-lg" name="client_id" id="client_id">
               @foreach ($clients as $client)
               <option value="{{ $client->id }}">{{ $client->name }}</option>
               @endforeach

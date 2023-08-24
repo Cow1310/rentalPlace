@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
           <label>Phone</label>
-          <input type="text" class="form-control" name="Phone" placeholder="Enter phone" value="{{$places->phone}}">
+          <input type="text" class="form-control" name="phone" placeholder="Enter phone" value="{{$places->phone}}">
         </div>
         <div class="form-group">
           <label>Price</label>

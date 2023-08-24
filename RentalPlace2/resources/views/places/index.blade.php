@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>places</h1>
+      <h1>Places</h1>
       <p>
         <a href="{{ route('places.create') }}" class="btn btn-success">Add New place</a>
       </p>

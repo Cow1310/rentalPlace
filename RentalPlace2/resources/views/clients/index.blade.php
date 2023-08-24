@@ -11,8 +11,9 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>ID</th>
             <th>name</th>
-             <th>phone number<th>
+            <th>phone number</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -21,7 +22,7 @@
           <tr>
             <td>{{ $client->id }}</td>
             <td>{{ $client->name }}</td>
-            <td>{{ $client->country }}</td>
+            <td>{{ $client->phone }}</td>
             <td>
               <a href="{{ route('clients.show', $client->id) }}" class="btn btn-info">Details</a>
               <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-primary">Edit</a>

@@ -33,9 +33,13 @@ class placeController extends Controller
      */
     public function store(Request $request)
     {
-        Place::create($request->all());
+        $places = new Place();
+        $places->phone = $request->phone;
+        $places->client_id = $request->client_id;
+        $places->address = $request->address;
+        $places->price = $request->price;
         $places->save();
-        return redirect()->route('places.index');
+        return redirect('places');
     }
 
     /**
