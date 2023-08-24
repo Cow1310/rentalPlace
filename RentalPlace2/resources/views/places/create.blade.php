@@ -9,7 +9,7 @@
         @csrf
         <div class="form-group">
           <div class="mb-3">
-            <label for="" class="form-label">Place</label>
+            <label for="" class="form-label">Client</label>
             <select class="form-select form-select-lg" name="place_id" id="place_id">
               @foreach ($clients as $client)
               <option value="{{ $client->id }}">{{ $client->name }}</option>

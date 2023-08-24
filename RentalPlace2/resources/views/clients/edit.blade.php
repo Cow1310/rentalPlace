@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
           <label>Phone number</label>
-          <input type="text" class="form-control" name="phone number" placeholder="Enter phone number" value="{{$clients->phone number}}">
+          <input type="text" class="form-control" name="phone" placeholder="Enter phone number" value="{{$clients->phone}}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

@@ -24,7 +24,7 @@ class AdminController extends Controller
     public function create()
     {
         $admins = Admin::all();
-        return view('admins.create', compact('admins', 'client'));
+        return view('admins.create', compact('admins'));
     }
 
     /**

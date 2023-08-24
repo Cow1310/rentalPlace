@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Details for id ' . $admins->id)
 @section('content')
+
 <div class="container">
   <div class="row">
     <div class="col-12">
@@ -16,6 +17,7 @@
             <th>Phone number</th>
             <td>{{ $admins->phone }}</td>
           </tr>
+          
         </tbody>
       </table>
     </div>
