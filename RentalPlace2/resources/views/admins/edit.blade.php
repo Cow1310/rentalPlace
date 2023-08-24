@@ -10,15 +10,15 @@
         @method('PUT')
         <div class="form-group">
           <label>Name</label>
-          <input type="text" class="form-control" name="name" placeholder="Enter name" value="{{$admin->name}}">
+          <input type="text" class="form-control" name="name" placeholder="Enter name" value="{{$admins->id}}">
         </div>
         <div class="form-group">
           <label>Phone number</label>
-          <input type="text" class="form-control" name="phone number" placeholder="Enter phone number" value="{{$admin->phone number}}">
+          <input type="text" class="form-control" name="phone" placeholder="Enter phone number" value="{{$admins->phone}}">
         </div>
         <div class="form-group">
           <label>Descriptionr</label>
-          <input type="text" class="form-control" name="description" placeholder="Enter description" value="{{$admin->description}}">
+          <input type="text" class="form-control" name="description" placeholder="Enter description" value="{{$admins->description}}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

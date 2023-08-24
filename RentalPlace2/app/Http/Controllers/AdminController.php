@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Place;
 use App\Models\Admin;
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -23,7 +24,7 @@ class AdminController extends Controller
     public function create()
     {
         $admins = Admin::all();
-        return view('admins.create', compact('admins'));
+        return view('admins.create', compact('admins', 'client'));
     }
 
     /**
@@ -32,7 +33,7 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         Admin::create($request->all());
-
+      
         return redirect()->route('admins.index');
     }
 
@@ -42,7 +43,7 @@ class AdminController extends Controller
     public function show(string $id)
     {
         $admins = Admin::find($id);
-        return view('admins.show', compact('Admin'));
+        return view('admins.show', compact('admins'));
     }
 
     /**
@@ -51,7 +52,7 @@ class AdminController extends Controller
     public function edit(string $id)
     {
         $admins = Admin::find($id);
-        return view('admins.edit', compact('Admin'));
+        return view('admins.edit', compact('admins'));
     }
 
     /**
@@ -61,6 +62,7 @@ class AdminController extends Controller
     {
         $admins = Admin::find($id);
         $admins->update($request->all());
+        $admins->save();
         return redirect()->route('admins.index');
     }
 

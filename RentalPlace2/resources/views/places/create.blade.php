@@ -11,8 +11,8 @@
           <div class="mb-3">
             <label for="" class="form-label">Place</label>
             <select class="form-select form-select-lg" name="place_id" id="place_id">
-              @foreach ($places as $place)
-              <option value="{{ $place->id }}">{{ $place->name }}</option>
+              @foreach ($clients as $client)
+              <option value="{{ $client->id }}">{{ $client->name }}</option>
               @endforeach
             </select>
           </div>

@@ -13,11 +13,15 @@
         </div>
         <div class="form-group">
           <label>Phone number</label>
-          <input type="text" class="form-control" name="Phone" placeholder="Enter Phone number">
+          <input type="text" class="form-control" name="phone" placeholder="Enter Phone number">
         </div>
         <div class="form-group">
           <label>Description</label>
           <input type="text" class="form-control" name="description" placeholder="Enter description">
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" class="form-control" name="address" placeholder="Enter address">
         </div>
         <button type="submit" class="btn btn-primary">Add New Admin</button>
       </form>

@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-12">
       <h1>Add New Client</h1>
-      <form action="{{ route('places.store') }}" method="POST">
+      <form action="{{ route('clients.store') }}" method="POST">
         @csrf
         <div class="form-group">
           <label>Name</label>

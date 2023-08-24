@@ -6,7 +6,7 @@
     <div class="col-12">
       <h1>Client</h1>
       <p>
-        <a href="{{ route('client.create') }}" class="btn btn-success">Add New Client</a>
+        <a href="{{ route('clients.create') }}" class="btn btn-success">Add New Client</a>
       </p>
       <table class="table table-striped">
         <thead>
@@ -17,15 +17,15 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($client as $client)
+          @foreach($clients as $client)
           <tr>
             <td>{{ $client->id }}</td>
             <td>{{ $client->name }}</td>
             <td>{{ $client->country }}</td>
             <td>
-              <a href="{{ route('client.show', $client->id) }}" class="btn btn-info">Details</a>
-              <a href="{{ route('client.edit', $client->id) }}" class="btn btn-primary">Edit</a>
-              <form style="display:inline-block" method="POST" action="{{ route('client.destroy', $client->id) }}">
+              <a href="{{ route('clients.show', $client->id) }}" class="btn btn-info">Details</a>
+              <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-primary">Edit</a>
+              <form style="display:inline-block" method="POST" action="{{ route('clients.destroy', $client->id) }}">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>

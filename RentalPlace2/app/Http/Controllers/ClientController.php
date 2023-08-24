@@ -31,6 +31,7 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $clients = Client::create($request->all());
+        $clients->save();
         return redirect()->route('clients.index');
     }
 
@@ -59,6 +60,7 @@ class ClientController extends Controller
     {
         $clients = Client::find($id);
         $clients->update($request->all());
+        $clients->save();
         return redirect()->route('clients.index');
     }
 

@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-12">
       <h1>Details for name {{ $client->name }}</h1>
-      <p><a href="{{ route('clientz.index') }}">Back to all client</a></p>
+      <p><a href="{{ route('clients.index') }}">Back to all client</a></p>
       <table class="table table-striped">
         <tbody>
           <tr>
@@ -14,7 +14,7 @@
           </tr>
           <tr>
             <th>Phone number</th>
-            <td>{{ $client->phone number }}</td>
+            <td>{{ $client->phone }}</td>
           </tr>
         </tbody>
       </table>

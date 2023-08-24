@@ -9,7 +9,7 @@ class Place extends Model
 {
     use HasFactory;
     protected $table ='places';
-    protected $fillable=['ID','address', 'price','phone' ];
+    protected $fillable=['address', 'price','phone' ];
 
     public function client()
     {

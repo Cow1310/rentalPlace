@@ -23,7 +23,9 @@ class placeController extends Controller
     public function create()
     {
         $places = Place::all();
-        return view('places.create', compact('places'));
+        $clients = Client::all();
+
+        return view('places.create', compact('places', 'clients'));
     }
 
     /**
@@ -32,7 +34,7 @@ class placeController extends Controller
     public function store(Request $request)
     {
         Place::create($request->all());
-
+        $places->save();
         return redirect()->route('places.index');
     }
 
@@ -61,6 +63,7 @@ class placeController extends Controller
     {
         $places = Place::find($id);
         $places->update($request->all());
+        $places->save();
         return redirect()->route('places.index');
     }
 
